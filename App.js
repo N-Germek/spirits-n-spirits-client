@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header';
-import About from './About';
-import Spirit from './Spirit';
+import Header from './components/Header';
+import About from './components/About';
+import Spirit from './components/Spirit';
 import Container from 'react-bootstrap/Container';
-import Profile from './auth/Profile';
+import Profile from './components/auth/Profile';
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
