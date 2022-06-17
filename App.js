@@ -23,5 +23,6 @@ class App extends React.Component {
 		);
 	}
 }
-
+//requestbody should include the new tarot and drink objects as tarotObject and drinkObject
+//client needs to getUser on load and store user _id in state for later calls
 export default withAuth0(App);
