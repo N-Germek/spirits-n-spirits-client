@@ -3,7 +3,7 @@ import { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import natalija from './natalija.jpeg';
 
-class DevProfiles extends Component {
+class DevProfile extends Component {
 	render() {
 		return (
 			<Accordion>
@@ -41,4 +41,4 @@ class DevProfiles extends Component {
 		);
 	}
 }
-export default DevProfiles;
+export default DevProfile;
