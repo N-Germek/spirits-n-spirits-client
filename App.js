@@ -8,9 +8,30 @@ import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class App extends React.Component {
-	render() {
-		return (
-			<Container>
+	constructor(props) {
+		super(props);
+		this.state = {
+
+		}
+	}		
+
+handleUserCreate = async() => {
+	if (this.props.auth0.isAuthenticated) {
+		const res = await this.props.auth0.getIdTokenClaims();
+		const jwt = res.__raw;
+	}
+}
+
+//TODO: finish all code including handleUserCreate.
+
+
+
+
+
+
+			render() {
+				return (
+					<Container>
 				<Router>
 					<Header />
 					<Routes>
