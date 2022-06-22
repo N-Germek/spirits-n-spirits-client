@@ -11,8 +11,8 @@ class Header extends React.Component {
 		return (
 			<Navbar>
 				<Container>
-					<Navbar.Brand href="#spirit">Home</Navbar.Brand>
-					<Navbar.Brand href="#about">About</Navbar.Brand>
+					<Navbar.Brand href="spirit">Home</Navbar.Brand>
+					<Navbar.Brand href="about">About</Navbar.Brand>
 					<Navbar.Text>
 						<Profile />
 					</Navbar.Text>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import natalija from './natalija.jpeg';
+import natalija from '../img/natalija.jpeg';
 
-class DevProfile extends Component {
+class About extends Component {
 	render() {
 		return (
 			<Accordion>
@@ -21,7 +21,7 @@ class DevProfile extends Component {
 					<Accordion.Header>Accordion Item #2</Accordion.Header>
 					<Accordion.Body>
 						{/* <div className="photos">
-        <img src={} alt="" height={200} /> 
+        <img src={} alt="" height={200} />
         </div> */}
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 						labore
@@ -31,7 +31,7 @@ class DevProfile extends Component {
 					<Accordion.Header>Accordion Item #3</Accordion.Header>
 					<Accordion.Body>
 						{/* <div className="photos">
-        <img src={} alt="" height={200} /> 
+        <img src={} alt="" height={200} />
         </div> */}
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 						labore
@@ -41,4 +41,4 @@ class DevProfile extends Component {
 		);
 	}
 }
-export default DevProfile;
+export default About;

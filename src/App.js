@@ -6,14 +6,17 @@ import Container from 'react-bootstrap/Container';
 import Profile from './components/auth/Profile';
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import axios from 'axios';
 
 class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-
+			draw: {},
+			error: '',
+			drinkTarget: 'alcoholic'
 		}
-	}		
+	}
 
 handleUserCreate = async() => {
 	if (this.props.auth0.isAuthenticated) {
@@ -23,9 +26,38 @@ handleUserCreate = async() => {
 }
 
 //TODO: finish all code including handleUserCreate.
+dailyReading = async () => {
+	try {
+		const config = {
+			method: 'get',
+			baseURL: process.env.REACT_APP_SERVER,
+			url: '/draw',
+			params: this.state.drinkTarget
+		}
 
+		const response = await axios.get(config);
+		console.log('Axios: ', response.data);
+		console.log(response);
+		this.setState({ draw: response.data })
+	} catch(error) {
+		this.errorHandler(error);
+	}
+}
 
+drinkPreference = () => {
+	if(this.state.drinkTarget === 'alcoholic') {
+		this.setState({ drinkTarget: 'non-alcoholic'});
+	} else {
+		this.setState({ drinkTarget: 'alcoholic'});
+	}
+}
 
+errorHandler = (error) => {
+	console.error(error);
+	this.setState({ error: `Status Code: ${error.response.status} ${error.response.data.error}` })
+}
+
+//TODO: Write a user check function
 
 
 
@@ -36,7 +68,7 @@ handleUserCreate = async() => {
 					<Header />
 					<Routes>
 						<Route path="/profile" element={<Profile />} />
-						<Route exact path="/" element={<Spirit />} />
+						<Route exact path="/" element={<Spirit dailyReading={this.dailyReading} draw={this.state.draw} drinkPreference={this.drinkPreference} drinkTarget={this.state.drinkTarget} />} />
 						<Route path="/about" element={<About />} />
 					</Routes>
 				</Router>
