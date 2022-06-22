@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import About from './components/About';
 import Spirit from './components/Spirit';
@@ -12,58 +13,64 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			draw: {},
+			draw: false,
 			error: '',
 			drinkTarget: 'alcoholic'
 		}
 	}
 
-handleUserCreate = async() => {
-	if (this.props.auth0.isAuthenticated) {
-		const res = await this.props.auth0.getIdTokenClaims();
-		const jwt = res.__raw;
-	}
-}
+	// handleUserCreate = async () => {
+	// 	if (this.props.auth0.isAuthenticated) {
+	// 		const res = await this.props.auth0.getIdTokenClaims();
+	// 		const jwt = res.__raw;
+	// 	}
+	// }
 
-//TODO: finish all code including handleUserCreate.
-dailyReading = async () => {
-	try {
-		const config = {
-			method: 'get',
-			baseURL: process.env.REACT_APP_SERVER,
-			url: '/draw',
-			params: this.state.drinkTarget
+	//TODO: finish all code including handleUserCreate.
+	dailyReading = async () => {
+		try {
+			if (this.props.auth0.isAuthenticated) {
+				const res = await this.props.auth0.getIdTokenClaims();
+				const jwt = res.__raw;
+				const config = {
+					headers: { "Authorization": `Bearer ${jwt}` },
+					method: 'get',
+					baseURL: process.env.REACT_APP_SERVER,
+					url: '/draw',
+					params: {drinkTarget: this.state.drinkTarget}
+				}
+				
+				console.log(config);
+				const response = await axios(config);
+				console.log('Axios: ', response.data);
+				console.log(response);
+				this.setState({ draw: response.data })
+			}
+		} catch (error) {
+			this.errorHandler(error);
 		}
-
-		const response = await axios.get(config);
-		console.log('Axios: ', response.data);
-		console.log(response);
-		this.setState({ draw: response.data })
-	} catch(error) {
-		this.errorHandler(error);
 	}
-}
 
-drinkPreference = () => {
-	if(this.state.drinkTarget === 'alcoholic') {
-		this.setState({ drinkTarget: 'non-alcoholic'});
-	} else {
-		this.setState({ drinkTarget: 'alcoholic'});
+	drinkPreference = () => {
+		if (this.state.drinkTarget === 'alcoholic') {
+			this.setState({ drinkTarget: 'non-alcoholic' });
+		} else {
+			this.setState({ drinkTarget: 'alcoholic' });
+		}
 	}
-}
 
-errorHandler = (error) => {
-	console.error(error);
-	this.setState({ error: `Status Code: ${error.response.status} ${error.response.data.error}` })
-}
+	errorHandler = (error) => {
+		console.error(error);
+		this.setState({ error: `Status Code: ${error.response.status} ${error.response.data.error}` })
+	}
 
-//TODO: Write a user check function
-
+	//TODO: Write a user check function
 
 
-			render() {
-				return (
-					<Container>
+
+	render() {
+		return (
+			<Container>
 				<Router>
 					<Header />
 					<Routes>
