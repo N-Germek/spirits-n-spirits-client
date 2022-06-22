@@ -27,7 +27,7 @@ class App extends React.Component {
 	// }
 
 	//TODO: finish all code including handleUserCreate.
-	dailyReading = async () => {
+	dailyReading = async () => { // This needs to check server if it has the current user and if so, if/what they have cached. If there is no user, 
 		try {
 			if (this.props.auth0.isAuthenticated) {
 				const res = await this.props.auth0.getIdTokenClaims();
