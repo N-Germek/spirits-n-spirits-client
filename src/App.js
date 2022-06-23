@@ -4,7 +4,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Spirit from './components/Spirit';
 import Container from 'react-bootstrap/Container';
-import Profile from './components/auth/Profile';
+import Profile from './components/auth/Profile.js';
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
@@ -27,7 +27,7 @@ class App extends React.Component {
 	// }
 
 	//TODO: finish all code including handleUserCreate.
-	dailyReading = async () => { // This needs to check server if it has the current user and if so, if/what they have cached. If there is no user, 
+	dailyReading = async () => { // This needs to check server if it has the current user and if so, if/what they have cached. If there is no user,
 		try {
 			if (this.props.auth0.isAuthenticated) {
 				const res = await this.props.auth0.getIdTokenClaims();
@@ -39,7 +39,7 @@ class App extends React.Component {
 					url: '/draw',
 					params: {drinkTarget: this.state.drinkTarget}
 				}
-				
+
 				console.log(config);
 				const response = await axios(config);
 				console.log('Axios: ', response.data);
