@@ -9,18 +9,18 @@ class Tarot extends React.Component {
       {this.props.draw &&
           <>
           <Card style={{ width: '500px'}}>
-            <Card.Img variant="left" src={this.props.draw.drawnCard.image_url.src} alt={this.props.draw.drawnCard.name} />
+            <Card.Img variant="left" src={this.props.draw.tarotToday.image_url.src} alt={this.props.draw.tarotToday.name} />
           <Card.Text>
-            <a href={this.props.draw.drawnCard.image_url.page}>{this.props.draw.drawnCard.image_url.attribution}</a>
+            <a href={this.props.draw.tarotToday.image_url.page}>{this.props.draw.tarotToday.image_url.attribution}</a>
             </Card.Text>
             <Card.Text>
-          {`${this.props.draw.drawnCard.name}`}
+          {`${this.props.draw.tarotToday.name}`}
           </Card.Text>
           </Card>
 
           <Card style={{ width: '500px'}}>
           <Card.Text>
-          {`${this.props.draw.drawnCard.desc}`}
+          {`${this.props.draw.tarotToday.desc}`}
           </Card.Text>
           </Card>
           </>

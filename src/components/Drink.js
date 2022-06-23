@@ -9,18 +9,21 @@ class Drink extends React.Component {
       {this.props.draw &&
           <>
           <Card style={{ width: '500px'}}>
-            <Card.Img variant="left" src={this.props.draw.drawnCard.image_url.src} alt={this.props.draw.drawnCard.name} />
-          <Card.Text>
-            <a href={this.props.draw.drawnCard.image_url.page}>{this.props.draw.drawnCard.image_url.attribution}</a>
-            </Card.Text>
+            <Card.Img variant="left" src={this.props.draw.drinkChosen.strDrinkThumb} alt={this.props.draw.drinkChosen.strDrink} />
             <Card.Text>
-          {`${this.props.draw.drawnCard.name}`}
+          {`${this.props.draw.drinkChosen.strDrink}`}
           </Card.Text>
           </Card>
 
           <Card style={{ width: '500px'}}>
           <Card.Text>
-          {`${this.props.draw.drawnCard.desc}`}
+          {`${this.props.draw.drinkChosen.strInstructions}`}
+          </Card.Text>
+          </Card>
+
+          <Card style={{ width: '500px'}}>
+          <Card.Text>
+          Instructions: {`${this.props.draw.drinkChosen.strInstructions}`}
           </Card.Text>
           </Card>
           </>
