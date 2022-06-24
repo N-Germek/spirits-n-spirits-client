@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import natalija from '../img/natalija.jpeg';
+import zayah from '../img/tigrProfile.png';
 
 class About extends Component {
 	render() {
@@ -20,11 +21,10 @@ class About extends Component {
 				<Accordion.Item eventKey="1">
 					<Accordion.Header>Accordion Item #2</Accordion.Header>
 					<Accordion.Body>
-						{/* <div className="photos">
-        <img src={} alt="" height={200} />
-        </div> */}
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore
+						<div className="photos">
+        <img src={zayah} alt="" height={200} />
+        </div>
+						Software developer with growing skills in debugging and server-side logic.
 					</Accordion.Body>
 				</Accordion.Item>
 				<Accordion.Item eventKey="2">
