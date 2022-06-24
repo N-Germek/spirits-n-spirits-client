@@ -25,6 +25,12 @@ class Tarot extends React.Component {
                 <Card.Text>
                   {`${this.props.draw.tarotToday.desc}`}
                 </Card.Text>
+                <Card.Text>
+                  {`Upright meanings: ${this.props.draw.tarotToday.meaning_up}`}
+                </Card.Text>
+                <Card.Text>
+                  {`Reversed meanings: ${this.props.draw.tarotToday.meaning_rev}`}
+                </Card.Text>
               </Card>
             </CardGroup>
           </>
