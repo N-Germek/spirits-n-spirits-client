@@ -32,7 +32,7 @@ class Drink extends React.Component {
     console.log(returnArray, 'return array');
     return returnArray;
   }
-  
+
   render() {
     return (
       <>
@@ -40,25 +40,27 @@ class Drink extends React.Component {
           <>
             <CardGroup style={{ width: '60%' }}>
               <Card>
+                <Card.Header as="h4" >
+                  {`${this.props.draw.drinkChosen.strDrink}`}
+                </Card.Header>
                 <Card.Img variant="left" src={this.props.draw.drinkChosen.strDrinkThumb} alt={this.props.draw.drinkChosen.strDrink} />
               </Card>
 
-              <Card>
-                <Card.Title>
-                  {`${this.props.draw.drinkChosen.strDrink}`}
-                </Card.Title>
-                <Card.Text>
-                  {`${this.props.draw.drinkChosen.strInstructions}`}
-                </Card.Text>
-              </Card>
 
               <Card>
+                <Card.Header as="h4" >Ingredient List</Card.Header>
                 <Card.Text>
                   <ListGroup>
                   {
                     this.state.ingredientArray.map((ingredient, index) => <ListGroup.Item key={index}>{this.state.measurementArray[index]} {ingredient}</ListGroup.Item> )
                   }
                   </ListGroup>
+                </Card.Text>
+              </Card>
+              <Card>
+                <Card.Header as="h4" >Instructions</Card.Header>
+                <Card.Text>
+                  {`${this.props.draw.drinkChosen.strInstructions}`}
                 </Card.Text>
               </Card>
             </CardGroup>
