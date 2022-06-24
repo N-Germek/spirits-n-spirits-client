@@ -39,6 +39,7 @@ class Drink extends React.Component {
         {this.props.draw &&
           <>
             <CardGroup style={{ width: '60%' }}>
+
               <Card>
                 <Card.Header as="h4" >
                   {`${this.props.draw.drinkChosen.strDrink}`}
