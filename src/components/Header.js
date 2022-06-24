@@ -5,6 +5,7 @@ import Logout from './auth/Logout';
 import Profile from './auth/Profile';
 import Login from './auth/Login';
 import { withAuth0 } from '@auth0/auth0-react';
+import "../App.css";
 
 class Header extends React.Component {
 	render() {
@@ -13,16 +14,23 @@ class Header extends React.Component {
 				<Container>
 					<Navbar.Brand href="/">Home</Navbar.Brand>
 					<Navbar.Brand href="about">About</Navbar.Brand>
+
+
+
+					{this.props.auth0.isAuthenticated ?
+					<>
 					<Navbar.Brand href="UserProfile">Profile</Navbar.Brand>
-					<Navbar.Text>
+					{/* <Navbar.Text>
 						<Profile />
-					</Navbar.Text>
-					<Navbar.Text>
-						<Login />
-					</Navbar.Text>
+					</Navbar.Text> */}
 					<Navbar.Text>
 						<Logout />
 					</Navbar.Text>
+					</> :
+					<Navbar.Text>
+						<Login />
+					</Navbar.Text>
+	}
 				</Container>
 			</Navbar>
 			// <div id="fixed">
