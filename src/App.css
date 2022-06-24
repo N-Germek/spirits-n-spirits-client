@@ -21,3 +21,21 @@ div.centerButtons.container{
 div#root{
   margin-top: 10em;
 }
+#natalijacolor {
+  background-color: rgb(138, 247, 210);
+  color: rgb(0, 4, 128);
+}
+
+#derekcolor {
+  background-color: rgb(138, 247, 210);
+  color: rgb(0, 4, 128);
+
+}#zayahcolor {
+  background-color: rgb(138, 247, 210);
+  color: rgb(0, 4, 128);
+}
+.photos{
+  float: left;
+  margin-right: 20px;
+}
+
