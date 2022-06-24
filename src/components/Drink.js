@@ -39,7 +39,7 @@ class Drink extends React.Component {
         {this.props.draw &&
           <>
             <CardGroup style={{ width: '60%' }}>
-              <Card>
+              <Card style={{ margin: '25px, 25px, 25px, 25px' }}>
                 <Card.Img variant="left" src={this.props.draw.drinkChosen.strDrinkThumb} alt={this.props.draw.drinkChosen.strDrink} />
               </Card>
 
