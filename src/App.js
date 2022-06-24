@@ -17,7 +17,7 @@ class App extends React.Component {
 			draw: false,
 			error: '',
 			drinkTarget: 'alcoholic',
-			history: {}
+			history: ''
 		}
 	}
 
@@ -59,6 +59,8 @@ class App extends React.Component {
 		} else {
 			this.setState({ drinkTarget: 'alcoholic' });
 		}
+		// console.log('drink:', drink);
+		// this.setState({ drinkTarget: drink })
 	}
 
 	errorHandler = (error) => {
@@ -66,7 +68,7 @@ class App extends React.Component {
 		this.setState({ error: `Status Code: ${error.response.status} ${error.response.data.error}` })
 	}
 
-	deleteUser = async () => { 
+	deleteUser = async () => {
 		try {
 			if (this.props.auth0.isAuthenticated) {
 				const res = await this.props.auth0.getIdTokenClaims();
@@ -110,6 +112,11 @@ class App extends React.Component {
 		}
 	}
 
+	convertTimestamp = (timestamp) => {
+		let date = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(timestamp);
+		return date;
+	}
+
 
 	render() {
 		return (
@@ -120,7 +127,7 @@ class App extends React.Component {
 						<Route path="/profile" element={<Profile />} />
 						<Route exact path="/" element={<Spirit dailyReading={this.dailyReading} draw={this.state.draw} drinkPreference={this.drinkPreference} drinkTarget={this.state.drinkTarget} displayHistory={this.displayHistory} deleteUser={this.deleteUser} />} />
 						<Route path="/about" element={<About />} />
-						<Route path="/UserProfile" element={<UserProfile deleteUser={this.deleteUser} displayHistory={this.displayHistory} history={this.state.history}/>} />
+						<Route path="/UserProfile" element={<UserProfile deleteUser={this.deleteUser} displayHistory={this.displayHistory} history={this.state.history} convertTimestamp={this.convertTimestamp} />} />
 					</Routes>
 				</Router>
 			</Container>

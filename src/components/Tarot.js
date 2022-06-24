@@ -9,7 +9,7 @@ class Tarot extends React.Component {
       <>
         {this.props.draw &&
           <>
-            <CardGroup style={{ width: '60%' }}>
+            <CardGroup style={{ width: '60%' }} className="groupCenter">
               <Card >
                 <Card.Img variant="left" src={this.props.draw.tarotToday.image_url.src} alt={this.props.draw.tarotToday.name} />
                 <Card.Text>
@@ -18,7 +18,7 @@ class Tarot extends React.Component {
               </Card>
 
               <Card>
-                <Card.Title>
+                <Card.Title className="text-center">
                   {`${this.props.draw.tarotToday.name}`}
                 </Card.Title>
                 <Card.Text>
