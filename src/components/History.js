@@ -9,9 +9,9 @@ class History extends React.Component {
       <>
         <Container>
           <Card>
-          <Card.Title>
+          <Card.Header>
               Date: {this.props.timestamp}
-            </Card.Title>
+            </Card.Header>
             <Card.Text>
               Tarot Card Drawn: {this.props.tarotName}
             </Card.Text>

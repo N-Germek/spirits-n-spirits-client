@@ -19,9 +19,9 @@ class Tarot extends React.Component {
               </Card>
 
               <Card className="tarotCards" >
-                <Card.Title className="text-center">
+                <Card.Header as="h3" className="text-center">
                   {`${this.props.draw.tarotToday.name}`}
-                </Card.Title>
+                </Card.Header>
                 <Card.Text>
                   {`${this.props.draw.tarotToday.desc}`}
                 </Card.Text>

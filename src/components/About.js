@@ -7,6 +7,8 @@ import zayah from '../img/tigrProfile.png';
 class About extends Component {
 	render() {
 		return (
+			<>
+			<h1>Meet the Developers</h1>
 			<Accordion>
 				<Accordion.Item eventKey="0">
 					<Accordion.Header>Natalija Germek</Accordion.Header>
@@ -19,6 +21,7 @@ class About extends Component {
 				</Accordion.Item>
 				<Accordion.Item eventKey="1">
 					<Accordion.Header>Zayah Lang</Accordion.Header>
+
 					<Accordion.Body id="zayahColors">
 						<div className="photos">
         <img src={zayah} alt="" height={200} />
@@ -37,6 +40,7 @@ class About extends Component {
 					</Accordion.Body>
 				</Accordion.Item>
 			</Accordion>
+			</>
 		);
 	}
 }

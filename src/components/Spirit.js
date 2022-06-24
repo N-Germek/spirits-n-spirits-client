@@ -30,13 +30,18 @@ class Spirit extends React.Component {
             </Row>
           </>
           :
-          <Card>
-            <Card.Header as="h3">
-              New to Spirits & Spirits?
-              </Card.Header>
-              <Card.Text>Spirits & Spirits gives you a daily tarot reading with matching drink recommendation. It's a vibe.</Card.Text>
-              <Card.Footer>Login on the top right to begin</Card.Footer>
-          </Card>
+          <>
+          <h2>New to Spirits & Spirits?</h2>
+          <p>Spirits & Spirits gives you a daily tarot reading with matching drink recommendation. It's a vibe.</p>
+          <p>Login on the right to begin.</p>
+          </>
+          // <Card>
+          //   <Card.Header as="h3">
+          //     New to Spirits & Spirits?
+          //     </Card.Header>
+          //     <Card.Text>Spirits & Spirits gives you a daily tarot reading with matching drink recommendation. It's a vibe.</Card.Text>
+          //     <Card.Footer>Login on the top right to begin</Card.Footer>
+          // </Card>
         }
       </>
 
