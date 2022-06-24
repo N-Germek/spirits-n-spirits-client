@@ -1,3 +1,23 @@
+.centerButtons {
+  margin: auto;
+  width: 50%;
+}
+
 .spiritButton {
-  margin: auto 10% auto 10%;
+  margin: auto 20px;
+  padding: 10px 50px;
+  max-width: 200px;
+}
+
+div.centerButtons.container{
+  margin:auto;
+  width: 50%;
+}
+
+.groupCenter {
+  margin-top: 2em;
+}
+
+div#root{
+  margin-top: 10em;
 }

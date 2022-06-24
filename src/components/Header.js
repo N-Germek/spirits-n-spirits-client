@@ -10,7 +10,7 @@ import "../App.css";
 class Header extends React.Component {
 	render() {
 		return (
-			<Navbar>
+			<Navbar fixed="top" bg="dark" variant="dark">
 				<Container>
 					<Navbar.Brand href="/">Home</Navbar.Brand>
 					<Navbar.Brand href="about">About</Navbar.Brand>
