@@ -1,0 +1,45 @@
+.centerButtons {
+  margin: auto;
+  width: 50%;
+}
+
+.spiritButton {
+  margin: auto 20px;
+  padding: 10px 50px;
+  max-width: 200px;
+}
+
+div.centerButtons.container{
+  margin:auto;
+  width: 50%;
+}
+
+.groupCenter {
+  margin-top: 2em;
+}
+
+div#root{
+  margin: 10em
+}
+#natalijaColors {
+  background-color: rgb(138, 247, 210);
+  color: rgb(0, 4, 128);
+}
+
+#derekColors {
+  background-color: rgb(138, 247, 210);
+  color: rgb(0, 4, 128);
+
+}#zayahColors {
+  background-color: rgb(138, 247, 210);
+  color: rgb(0, 4, 128);
+}
+
+.photos{
+  float: left;
+  margin-right: 20px;
+}
+
+#left{
+    margin: 25px 25px 25px 25px;
+}
