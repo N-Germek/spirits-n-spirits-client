@@ -38,18 +38,17 @@ class Drink extends React.Component {
       <>
         {this.props.draw &&
           <>
-            <CardGroup style={{ width: '60%' }}>
-
-              <Card>
-                <Card.Header as="h4" >
+            {/* <CardGroup style={{ width: '60%' }}> */}
+              <Card className="drinkCards">
+                <Card.Header className="drinkHeader" as="h4" >
                   {`${this.props.draw.drinkChosen.strDrink}`}
                 </Card.Header>
                 <Card.Img variant="left" src={this.props.draw.drinkChosen.strDrinkThumb} alt={this.props.draw.drinkChosen.strDrink} />
               </Card>
 
 
-              <Card>
-                <Card.Header as="h4" >Ingredient List</Card.Header>
+              <Card className="drinkCards">
+                <Card.Header className="drinkHeader" as="h4" >Ingredient List</Card.Header>
                 <Card.Text>
                   <ListGroup>
                   {
@@ -58,13 +57,13 @@ class Drink extends React.Component {
                   </ListGroup>
                 </Card.Text>
               </Card>
-              <Card>
-                <Card.Header as="h4" >Instructions</Card.Header>
+              <Card className="drinkCards">
+                <Card.Header className="drinkHeader" as="h4" >Instructions</Card.Header>
                 <Card.Text>
                   {`${this.props.draw.drinkChosen.strInstructions}`}
                 </Card.Text>
               </Card>
-            </CardGroup>
+            {/* </CardGroup> */}
           </>
         }
       </>

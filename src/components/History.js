@@ -7,16 +7,16 @@ class History extends React.Component {
   render() {
     return (
       <>
-        <Container>
-          <Card>
-          <Card.Header>
-              Date: {this.props.timestamp}
+        <Container className="historyCardContainer" >
+          <Card className="historyCard" >
+          <Card.Header className="historyHeader" >
+              Date of reading: {this.props.timestamp}
             </Card.Header>
-            <Card.Text>
-              Tarot Card Drawn: {this.props.tarotName}
+            <Card.Text className="historyText" >
+              <h6>Tarot Card Drawn:</h6> {this.props.tarotName}
             </Card.Text>
-            <Card.Text>
-              Drink Chosen: {this.props.drinkName}
+            <Card.Text className="historyText">
+              <h6>Selected Drink:</h6> {this.props.drinkName}
             </Card.Text>
           </Card>
         </Container>
