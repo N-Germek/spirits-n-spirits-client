@@ -18,14 +18,18 @@ class Spirit extends React.Component {
       <>
         {this.props.auth0.isAuthenticated ?
           <>
-            <Container className="centerButtons">
+            <Container className="centerButtons" style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }} >
               <Button className="spiritButton" variant="outline-dark" onClick={this.props.drinkPreference}>{this.props.drinkTarget}</Button>
               <Button className="spiritButton" variant="outline-dark" onClick={this.props.dailyReading}>Draw Card</Button>
             </Container>
-            <Row xs={1} sm={2} md={3} lg={4}>
+            <Row xs={1} sm={2} md={3} lg={4} className="tarotRow" >
               <Tarot draw={this.props.draw} />
             </Row>
-            <Row xs={1} sm={2} md={3} lg={4}>
+            <Row xs={1} sm={2} md={3} lg={4} className="drinkRow" >
               <Drink draw={this.props.draw} />
             </Row>
           </>
