@@ -13,9 +13,12 @@ class UserProfile extends React.Component {
                 <Container className="profileContainer">
                 <Profile />
                 </Container>
+                <Container className="historyButtonsContainer">
                 <Button className="historyButton" variant="outline-dark" onClick={this.props.deleteUser}>Delete User</Button>
                 <Button className="historyButton" variant="outline-dark" onClick={this.props.displayHistory}>Display User History</Button>
+                </Container>
             </Container>
+            <Container className="historyCardContainer">
                 {this.props.history &&
                     (this.props.history.map(day => (
                         <History
@@ -25,6 +28,7 @@ class UserProfile extends React.Component {
                         />
                     )))
                 }
+            </Container>
             </>
 
         );

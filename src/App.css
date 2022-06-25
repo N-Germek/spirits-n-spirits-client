@@ -76,6 +76,7 @@ overflow: auto;
   margin: auto;
   width: 50%;
   padding: 20px;
+  text-align: center;
 }
 
 .profileContainer.img{
@@ -90,9 +91,22 @@ overflow: auto;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.historyButtonsContainer{
+  margin: auto;
+  text-align: center;
+}
+
 .historyCardContainer{
   margin: auto;
   width: 50%;
+  padding: 10px;
+  height: 650px;
+  overflow: auto;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+}
+
+.historyCompContainer{
   padding: 10px;
 }
 
@@ -130,17 +144,18 @@ div#root{
   margin: 10em
 }
 #natalijaColors {
-  background-color: rgb(138, 247, 210);
   color: rgb(0, 4, 128);
+  height: 200px;
 }
 
 #derekColors {
-  background-color: rgb(138, 247, 210);
   color: rgb(0, 4, 128);
+  height: 200px;
+}
 
-}#zayahColors {
-  background-color: rgb(138, 247, 210);
+#zayahColors {
   color: rgb(0, 4, 128);
+  height: 200px;
 }
 
 .photos{
@@ -150,4 +165,11 @@ div#root{
 
 #left{
     margin: 25px 25px 25px 25px;
+}
+
+#userImage{
+  margin: auto;
+  width: max-content;
+  border: 2px black solid;
+  border-radius: 2px;
 }

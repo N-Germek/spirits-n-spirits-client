@@ -7,7 +7,7 @@ class History extends React.Component {
   render() {
     return (
       <>
-        <Container className="historyCardContainer" >
+        <Container className="historyCompContainer" >
           <Card className="historyCard" >
           <Card.Header className="historyHeader" >
               Date of reading: {this.props.timestamp}
