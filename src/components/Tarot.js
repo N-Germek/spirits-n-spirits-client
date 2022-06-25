@@ -10,29 +10,29 @@ class Tarot extends React.Component {
       <>
         {this.props.draw &&
           <>
-            <CardGroup style={{ width: '60%' }} className="groupCenter">
-              <Card className="tarotCards" >
+            {/* <CardGroup style={{ width: '60%' }} className="groupCenter"> */}
+              <Card className="tarotCards" style={{ width: '25%' }} >
                 <Card.Img variant="left" src={this.props.draw.tarotToday.image_url.src} alt={this.props.draw.tarotToday.name} />
                 <Card.Text>
                   <a href={this.props.draw.tarotToday.image_url.page}>{this.props.draw.tarotToday.image_url.attribution}</a>
                 </Card.Text>
               </Card>
 
-              <Card className="tarotCards" >
-                <Card.Header as="h3" className="text-center">
+              <Card className="tarotCards" style={{ width: '60%' }} >
+                <Card.Header as="h3" className="tarotHeader" >
                   {`${this.props.draw.tarotToday.name}`}
                 </Card.Header>
-                <Card.Text>
-                  {`${this.props.draw.tarotToday.desc}`}
+                <Card.Text className="tarotText" >
+                  <h6>Upright meanings:</h6> {`${this.props.draw.tarotToday.meaning_up}`}
+                </Card.Text>
+                <Card.Text className="tarotText">
+                <h6>Reversed meanings:</h6>{`${this.props.draw.tarotToday.meaning_rev}`}
                 </Card.Text>
                 <Card.Text>
-                  {`Upright meanings: ${this.props.draw.tarotToday.meaning_up}`}
-                </Card.Text>
-                <Card.Text>
-                  {`Reversed meanings: ${this.props.draw.tarotToday.meaning_rev}`}
+                <h6>Card Description:</h6>{`${this.props.draw.tarotToday.desc}`}
                 </Card.Text>
               </Card>
-            </CardGroup>
+            {/* </CardGroup> */}
           </>
         }
       </>

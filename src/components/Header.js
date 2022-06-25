@@ -12,22 +12,24 @@ class Header extends React.Component {
 		return (
 			<Navbar fixed="top" bg="dark" variant="dark">
 				<Container>
-					<Navbar.Brand href="/">Home</Navbar.Brand>
-					<Navbar.Brand href="about">About</Navbar.Brand>
+					<Navbar.Brand className="headerText" href="/">Home</Navbar.Brand>
+					<Navbar.Brand className="headerText" href="about">About</Navbar.Brand>
 
+
+						<Navbar.Brand className="brandName" >Spirits & Spirits</Navbar.Brand>
 
 
 					{this.props.auth0.isAuthenticated ?
 					<>
-					<Navbar.Brand href="UserProfile">Profile</Navbar.Brand>
+					<Navbar.Brand className="headerText" href="UserProfile">Profile</Navbar.Brand>
 					{/* <Navbar.Text>
 						<Profile />
 					</Navbar.Text> */}
-					<Navbar.Text>
+					<Navbar.Text className="headerText">
 						<Logout />
 					</Navbar.Text>
 					</> :
-					<Navbar.Text>
+					<Navbar.Text className="headerText">
 						<Login />
 					</Navbar.Text>
 	}

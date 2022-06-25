@@ -2,15 +2,23 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import History from './History.js';
 import Profile from './auth/Profile.js';
+import Container from 'react-bootstrap/Container';
 
 // display image left of description for card
 class UserProfile extends React.Component {
     render() {
         return (
             <>
+            <Container className="historyContainer" >
+                <Container className="profileContainer">
                 <Profile />
-                <Button variant="outline-dark" onClick={this.props.deleteUser}>Delete User</Button>
-                <Button variant="outline-dark" onClick={this.props.displayHistory}>Display User History</Button>
+                </Container>
+                <Container className="historyButtonsContainer">
+                <Button className="historyButton" variant="outline-dark" onClick={this.props.deleteUser}>Delete User</Button>
+                <Button className="historyButton" variant="outline-dark" onClick={this.props.displayHistory}>Display User History</Button>
+                </Container>
+            </Container>
+            <Container className="historyCardContainer">
                 {this.props.history &&
                     (this.props.history.map(day => (
                         <History
@@ -20,6 +28,7 @@ class UserProfile extends React.Component {
                         />
                     )))
                 }
+            </Container>
             </>
 
         );

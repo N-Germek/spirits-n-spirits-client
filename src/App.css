@@ -1,12 +1,134 @@
+.App {
+  text-align: center;
+}
+
+.tarotCards{
+padding: 20px;
+margin: 20px;
+border: 2px black solid;
+border-radius: 6px;
+background-color: gainsboro;
+height: 550px;
+overflow: auto;
+}
+
+
+.tarotHeader{
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.drinkCards{
+  padding: 20px;
+  margin: 20px;
+  border: 2px black solid;
+  background-color: gainsboro;
+  border-radius: 6px;
+  overflow: auto;
+  width: 350px;
+}
+
+.drinkHeader{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+.tarotRow{
+  margin: auto;
+  justify-content: center;
+}
+
+.drinkRow{
+  margin: auto;
+  justify-content: space-between;
+
+}
+
+.brandName{
+  font-size: 2.5em;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.headerText{
+  font-size: 1.5em;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .centerButtons {
   margin: auto;
   width: 50%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .spiritButton {
   margin: auto 20px;
   padding: 10px 50px;
   max-width: 200px;
+  border: 2px black solid;
+}
+
+.historyContainer{
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+}
+
+.profileContainer{
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.profileContainer.img{
+  margin: auto;
+  width: 50%;
+}
+
+.historyButton{
+  margin: auto 20px;
+  padding: 10px 50px;
+  max-width: 400px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.historyButtonsContainer{
+  margin: auto;
+  text-align: center;
+}
+
+.historyCardContainer{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  height: 650px;
+  overflow: auto;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+}
+
+.historyCompContainer{
+  padding: 10px;
+}
+
+.historyCard{
+  width: 100%;
+}
+
+
+.historyHeader{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.historyText{
+  margin: auto 10px;
+  text-align: left;
+}
+
+.historyText > h6{
+  display: inline;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 div.centerButtons.container{
@@ -22,17 +144,18 @@ div#root{
   margin: 10em
 }
 #natalijaColors {
-  background-color: rgb(138, 247, 210);
   color: rgb(0, 4, 128);
+  height: 200px;
 }
 
 #derekColors {
-  background-color: rgb(138, 247, 210);
   color: rgb(0, 4, 128);
+  height: 200px;
+}
 
-}#zayahColors {
-  background-color: rgb(138, 247, 210);
+#zayahColors {
   color: rgb(0, 4, 128);
+  height: 200px;
 }
 
 .photos{
@@ -42,4 +165,11 @@ div#root{
 
 #left{
     margin: 25px 25px 25px 25px;
+}
+
+#userImage{
+  margin: auto;
+  width: max-content;
+  border: 2px black solid;
+  border-radius: 2px;
 }
