@@ -3,6 +3,7 @@ import { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import natalija from '../img/natalija.jpeg';
 import zayah from '../img/tigrProfile.png';
+import derek from '../img/pro100.jpg';
 
 class About extends Component {
 	render() {
@@ -32,9 +33,9 @@ class About extends Component {
 				<Accordion.Item eventKey="2">
 					<Accordion.Header>Derek J. Douglas</Accordion.Header>
 					<Accordion.Body id="derekColors">
-						{/* <div className="photos">
-        <img src={} alt="" height={200} />
-        </div> */}
+						<div className="photos">
+        <img src={derek} alt="" height={100} />
+        </div>
 						Hi! I'm a software developer with a background in the teaching and linguistics.
 					</Accordion.Body>
 				</Accordion.Item>
