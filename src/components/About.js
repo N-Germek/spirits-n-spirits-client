@@ -2,8 +2,8 @@ import React from 'react';
 import { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import natalija from '../img/natalija.jpeg';
-import zayah from '../img/tigrProfile.png';
 import derek from '../img/pro100.jpg';
+import zayah from '../img/zayahprofile.jpg';
 
 class About extends Component {
 	render() {
